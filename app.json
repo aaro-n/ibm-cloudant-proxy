@@ -1,0 +1,29 @@
+{
+	"name": "IBM Cloudant访问加速",
+	"description": "反代IBM Cloudant，主要用于MoonFM同步加速。",
+	"keywords": [
+		"Cloudant",
+		"MoonFM",
+		"CouchDb",
+		"reverse proxy",
+		"nginx"
+	],
+	"repository": "https://github.com/aaro-n/ibm-cloudant-proxy.git",
+	"buildpacks": [
+		{
+			"url": "https://github.com/aaro-n/heroku-buildpack-nginx.git"
+		}
+	],
+	"env": {
+		"MF_CLOUDANT": {
+			"description": "在 IBM Cloudant上创建的CouchDb数据库名称."
+		},
+		"CLOUDANT_URL": {
+                        "description": "IBM Cloudant上创建的数据库访问链接，即 XXX.cloudantnosqldb.appdomain.cloud/moon-fm ，moon-fm是创建的数据库名称，注意替换。"
+                },
+                "CLOUDANT_HOST": {
+                        "description": "IBM Cloudant访问主机名，即 XXX.cloudantnosqldb.appdomain.cloud ，不带数据名称"
+                }
+	},
+	"stack": "heroku-20"
+}
