@@ -25,5 +25,14 @@
                         "description": "IBM Cloudant访问主机名，即 XXX.cloudantnosqldb.appdomain.cloud ，不带数据名称"
                 }
 	},
+	"addons": [
+           {
+            "plan": "scheduler:standard"
+           },
+           {
+            "plan": "papertrail",
+            "as": "WP_DB"
+           }
+          ],
 	"stack": "heroku-20"
 }
