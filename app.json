@@ -30,8 +30,7 @@
             "plan": "scheduler:standard"
            },
            {
-            "plan": "papertrail",
-            "as": "WP_DB"
+            "plan": "papertrail"
            }
           ],
 	"stack": "heroku-20"
