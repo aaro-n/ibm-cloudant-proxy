@@ -40,6 +40,7 @@ http {
                          proxy_set_header Host <%= ENV["CLOUDANT_HOST"] %>;
                          proxy_set_header  Authorization $http_authorization;
                          proxy_pass_header Authorization;
+                         proxy_read_timeout <%= ENV["CLOUDANT_TIMEOUT"] %>;
                 }
 
 		if ($http_x_forwarded_proto != "https") {
